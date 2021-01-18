@@ -10942,30 +10942,16 @@ h6 {
   font-family: var(--font-primario);
 }
 
-header {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  min-height: 500px;
+.bg-first {
+  height: 100%;
   width: 100%;
-  overflow: hidden;
-}
-
-header video {
+  background-color: var(--navbar-color);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 0 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 0 100%, 0% 100%);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
+  top: 0px;
+  bottom: 0px;
+  z-index: -1000;
 }
 
 @media (min-width: 768px) {
@@ -10981,10 +10967,6 @@ header .container {
 
 .bg-black {
   background-color: #212529;
-}
-
-.margin-top-100 {
-  margin-top: -100px;
 }
 
 /* fonts  */

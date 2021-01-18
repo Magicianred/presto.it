@@ -63,8 +63,7 @@
 
                                     </div>
                                     <div class="col-md-6">
-                                        <img class="img-fluid rounded-pill" src="{{ Storage::url('img/user.jpg') }}"
-                                            width="90%" alt="foto-profilo">
+                                       
 
                                     </div>
                                 </div>

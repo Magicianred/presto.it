@@ -13,15 +13,14 @@
 
     @endif
     <header class="text-white text-center">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="/media/video/video.mp4" type="video/mp4">
-        </video>
-        <div class="container h-100 mt-5 pt-5">
+        <div class="bg-first">
+        </div>
+        <div class="container mt-5 pt-5" style="z-index: 9999">
             <div class="row mt-5">
                 <div  class="col-xl-9 mx-auto">
                     <img src="/media/logo/logo-bianco-orr.png" width="500" class="img-fluid my-5" alt="logo-presto">
                 </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto" >
                     <form action="{{ route('search') }}" method="GET" class="mb-5">
 
                         <div class="form-row">

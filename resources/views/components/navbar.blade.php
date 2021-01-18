@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
     <a class="navbar-brand" href="{{ route('home') }}">
-        <img src="{{ Storage::url('logo-bianco-orr.png') }}" width="100" class="img-fluid" alt="logo" id="navbarLogo">
+        <img src="{{ Storage::url('logo/logo-bianco-orr.png') }}" width="100" class="img-fluid" alt="logo" id="navbarLogo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
         aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">

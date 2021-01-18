@@ -105,8 +105,8 @@ class HomeController extends Controller
 
     dispatch(new ResizeImage(
       $fileName,
-      120,
-      120
+      300,
+      150
     ));
 
     session()->push("images.{$uniqueSecret}", $fileName);
@@ -139,7 +139,7 @@ class HomeController extends Controller
     foreach ($images as $image) {
       $data[] = [
         'id' => $image,
-        'src' => AnnouncementImage::getUrlByFilePath($image, 120, 120)
+        'src' => AnnouncementImage::getUrlByFilePath($image, 300, 150)
       ];
     }
 

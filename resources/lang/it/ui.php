@@ -43,7 +43,8 @@
         'auto e motori' => 'auto e motori',
         'sport' => 'sport',
         'immobili' => 'immobili',
-        'Esci' => 'Esci'
-
+        'Esci' => 'Esci',
+        'Cestino Annunci' => 'Cestino Annunci',
+        'Elimina' => 'Elimina'
         ]
 ?>

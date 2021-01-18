@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container my-5">
+    <div class="container my-5 pt-5">
        
             <div class="row">
-                <h1>{{__('ui.Risultati di ricerca per')}} : {{ $q }}</h1>
+                <h1>{{__('ui.Risultati di ricerca per')}} : <span class="font-weight-bold"> {{ $q }}</span></h1>
             </div>
             <div class="row">
                 @foreach ($announcements as $announcement)
@@ -10,10 +10,30 @@
                     <a href="{{ route('announcements.show', compact('announcement')) }}" class="text-decoration-none">
                         <h2 class="text-white">{{ $announcement->title }}</h2>
                     </a>
-                    <h6 class="text-uppercase my-3"> <span class="bg-yellow py-2 px-2 rounded-bottom pt-0 "><a
-                                class="text-dark"
-                                href="{{ route('public.announcements.category', [$announcement->category->name, $announcement->category->id]) }}">{{ $announcement->category->name }}</a></span>
-                    </h6>
+                    @switch(App::getLocale())
+                        @case('it')
+                            <h6 class="text-uppercase my-3">
+                                <span class="bg-yellow py-2 px-2 rounded-bottom pt-0 ">
+                                    <a class="text-dark"
+                                        href="{{ route('public.announcements.category', [$announcement->category->name_it, $announcement->category->id]) }}">
+                                        {{ $announcement->category->name_it }}
+                                    </a>
+                                </span>
+                            </h6>
+                        @break
+                        @case('en')
+                            <h6 class="text-uppercase my-3">
+                                <span class="bg-yellow py-2 px-2 rounded-bottom pt-0 ">
+                                    <a class="text-dark"
+                                        href="{{ route('public.announcements.category', [$announcement->category->name_en, $announcement->category->id]) }}">
+                                        {{ $announcement->category->name_en }}
+                                    </a>
+                                </span>
+                            </h6>
+                        @break
+                        @default
+
+                    @endswitch
                     <p class="text-white mt-4"><i class="fas fa-user text-white"></i> {{ $announcement->user->name }} <i
                             class="fal fa-clock ml-2"></i>
                         {{ $announcement->created_at->format('d/m/Y') }}
